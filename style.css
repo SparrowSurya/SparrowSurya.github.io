@@ -1,133 +1,59 @@
-/* all variables here */
-:root {
-    /* image */
-    --color-empty: #dcdcdc; 
-    --profile-pic-size: 24em; 
-    --logo-size: 48px;
 
-    /* main color palette (not yet finalised) */
-    --accent: #f26627;
-    --light-accent: #f9a26c;
-    --theme-col: #efeeee;
-    --light-blue: #9bd7d1;
-    --dark-blue: #325d79;
+/* Custom default button */
+.btn-light,
+.btn-light:hover,
+.btn-light:focus {
+    color: #333;
+    text-shadow: none; /* Prevent inheritance from `body` */
 }
 
-/* defaults */
-* {
-    padding: 0;
-    margin: 0;
+/* structure */
+body {
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
-/* heading font setting */
-h1, h2, h3, h4, h5, h6 {
-    font-family: ui-sans-serif, Arial, Helvetica, sans-serif;
+/* container inside structure */
+.cover-container {
+    max-width: 45em;
 }
-
-/* paragraph font setting */
-p {
-    font-size: 100%;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-html {
-    background-color: var(--light-blue);
-}
-
-
-/* navigation */
-
-/* single line horizonatal block */
-nav {
-    position: sticky;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 64px;
-    
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-
-    background-color: var(--theme-col);
-    box-shadow: 0 3px 8px lightgray;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo img{
-    aspect-ratio: 1;
-    background-color: var(--color-empty);
-    height: var(--logo-size);
-    width: var(--logo-size);
-    transform: scaleX(-1);
-    border-radius: 6px;
-    margin: 0.5rem;
-}
-
-/* all nav-links here */
-.nav-items {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-/* for various nav-links */
-nav a {
-    font-size: 120%;
-    text-decoration: none;
-    color: black;
-    padding: 12px 16px;
-    margin: 0 12px;
-}
-
-nav a:hover {
-    color: var(--accent);
-}
-
 
 /* header */
 
-header {
-    color: var(--dark-blue);
-    padding: 4rem 6rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+.nav-masthead .nav-link {
+    color: rgba(255, 255, 255, .5);
+    border-bottom: .25rem solid transparent;
 }
 
-.profile-image-container img {
-    border-radius: 50%;
-    aspect-ratio: 1;
-    height: var(--profile-pic-size);
-    width: var(--profile-pic-size);
-    border: 1px solid var(--dark-blue);
-    box-shadow: 0 0 16px;
-    filter: saturate(1.16);
-    animation: fade-in 1s;
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, .25);
 }
 
-.intro {
-    width: 40em;
+.nav-masthead .nav-link + .nav-link {
+    margin-left: 1.5rem;
 }
 
-.intro h1 {
-    font-family: math, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-bottom: 2px solid var(--accent);
-    font-size: 3em;
-    margin: 24px 0;
-    animation: slide-left 1s ease-in-out;
+.nav-masthead .active {
+    color: #fff;
+    border-bottom-color: #fff;
 }
 
-.intro p {
-    font-family: cursive;
-    font-size: 1.2em;
-    margin: 0 2rem;
+#signature {
+    font-family: "Playfair Display";
 }
 
+#my-name {
+    font-family: "Roboto";
+    font-size: 2.25rem;
+    letter-spacing: 1px;
+}
+
+#my-description {
+    font-family: "Open Sans";
+    font-size: 1.25rem;
+}
+
+.emoji {
+    font-family: "Noto Color Emoji";
+}
